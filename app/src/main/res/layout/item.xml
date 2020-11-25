@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="380dp"
+            android:layout_height="69dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="85dp"
+                android:layout_height="66dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/t_nombre"
+                    android:layout_width="85dp"
+                    android:layout_height="30dp"
+                    android:hint="Nombre" />
+
+                <TextView
+                    android:id="@+id/t_edad"
+                    android:layout_width="85dp"
+                    android:layout_height="30dp"
+                    android:hint="Edad" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="87dp"
+                android:layout_height="66dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/t_telefono"
+                    android:layout_width="85dp"
+                    android:layout_height="30dp"
+                    android:hint="Telefono" />
+
+                <TextView
+                    android:id="@+id/t_email"
+                    android:layout_width="85dp"
+                    android:layout_height="30dp"
+                    android:hint="Email" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_editar"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:background="@mipmap/baseline_post_add_black_18dp" />
+
+            <Button
+                android:id="@+id/btn_eliminar"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:background="@mipmap/baseline_person_remove_alt_1_black_18dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
