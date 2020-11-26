@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -64,16 +65,22 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         // codificar el boton guardar
-                        // falta incorporar el Try catch
 
-                        agenda  = new Agenda(nombre.getText().toString(),
-                                    telefono.getText().toString(),
-                                    email.getText().toString(),
-                                    Integer.parseInt(edad.getText().toString()));
+                    try {
+                        agenda = new Agenda(nombre.getText().toString(),
+                                telefono.getText().toString(),
+                                email.getText().toString(),
+                                Integer.parseInt(edad.getText().toString()));
 
                         dao.insertar(agenda);
+
+                        lista=dao.verTodos();
+
                         adapter.notifyDataSetChanged();
                         dialogo.dismiss();
+                    } catch(Exception e){
+                        Toast.makeText(getApplication(), "Error.. NO se Guardó", Toast.LENGTH_SHORT);
+                    }
 
                     }
 
